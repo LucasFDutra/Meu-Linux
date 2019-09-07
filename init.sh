@@ -95,8 +95,8 @@ echo "Primeiro vamos atualizar o sistema"
 echo -n "pressione ENTER para continuar "
 read
 
-# sudo apt-get update
-# sudo apt-get upgrade
+sudo apt-get update
+sudo apt-get upgrade
 
 echo -n "pressione ENTER para continuar "
 read
@@ -338,8 +338,8 @@ echo "Agora vamos atualizar o sistema novamente"
 echo -n "pressione ENTER para continuar "
 read
 
-# sudo apt-get update
-# sudo apt-get upgrade
+sudo apt-get update
+sudo apt-get upgrade
 
 echo -n "pressione ENTER para continuar "
 read
