@@ -353,4 +353,5 @@ then
 else
   echo "Isso foi divertido, tchau!"
   read
+  exit
 fi
