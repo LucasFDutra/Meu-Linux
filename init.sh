@@ -89,15 +89,18 @@ read mega
 echo -n "Deseja instalar VS code? [y/n]: "
 read code
 
+echo -n "pressione ENTER para continuar "
 read
 clear
 
-echo -n "Primeiro vamos atualizar o sistema"
+echo "Primeiro vamos atualizar o sistema"
+echo -n "pressione ENTER para continuar "
 read
 
 sudo apt-get update
 sudo apt-get upgrade
 
+echo -n "pressione ENTER para continuar "
 read
 clear
 
@@ -266,6 +269,7 @@ then
   ./apps/deepinScreenshot.sh
 fi
 
+<<<<<<< HEAD
 if [ $peek == "y" ];
 then
   ./apps/peek.sh
@@ -278,6 +282,9 @@ then
 fi
 
 if [ $mega == "y" -a $system -eq 2 ];
+=======
+if [ $mega == "y" ];
+>>>>>>> 0e27cff3792fac95c687605831ebd3843a28cbfb
 then
   wget https://mega.nz/linux/MEGAsync/xUbuntu_18.04/amd64/megasync-xUbuntu_18.04_amd64.deb
   sudo dpkg -i megasync-xUbuntu_18.04_amd64.deb
@@ -291,6 +298,7 @@ then
   rm code_1.38.0-1567547996_amd64.deb
 fi
 
+echo -n "pressione ENTER para continuar "
 read
 
 clear
@@ -307,11 +315,14 @@ clear
 
 if [ $system -eq 2 ];
 then
-  echo - "Deseja adicionar scripts ao nemo? [y/n]: "
+  echo -n "Deseja adicionar scripts ao nemo? [y/n]: "
   read nemoScripts
   if [ $nemoScripts == "y" ];
   then
-    ./configSystem/nemoScripts/configNemoScripts.sh
+    cd configSystem/nemoScripts
+    ./configNemoScripts.sh
+    cd ..
+    cd ..
   fi
 fi
 
@@ -322,7 +333,10 @@ then
 
   if [ $snippetsVSCode == "y" ];
   then
-    ./configSystem/snippetsVSCode/addSnippets.sh
+    cd configSystem/snippetsVSCode
+    ./addSnippets.sh
+    cd ..
+    cd ..
   fi
 fi
 
@@ -331,15 +345,20 @@ read cedilla
 
 if [ $cedilla == "y" ];
 then
-  ./configSystem/configCedilla/configCedilla.sh
+  cd configSystem/configCedilla
+  ./configCedilla.sh
+  cd ..
+  cd ..
 fi
 
-echo -n "Agora vamos atualizar o sistema novamente"
+echo "Agora vamos atualizar o sistema novamente"
+echo -n "pressione ENTER para continuar "
 read
 
 sudo apt-get update
 sudo apt-get upgrade
 
+echo -n "pressione ENTER para continuar "
 read
 clear
 
@@ -351,4 +370,5 @@ then
 else
   echo "Isso foi divertido, tchau!"
   read
+  exit
 fi
