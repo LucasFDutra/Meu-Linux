@@ -82,6 +82,8 @@ echo -n "Deseja instalar sublime? [y/n]: "
 read sublime
 echo -n "Deseja instalar deepin screenshot? [y/n]: "
 read deepinScreenshot
+echo -n "Deseja instalar Peek? [y/n]: "
+read peek
 echo -n "Deseja instalar mega? [y/n]: "
 read mega
 echo -n "Deseja instalar VS code? [y/n]: "
@@ -262,6 +264,11 @@ fi
 if [ $deepinScreenshot == "y" ];
 then
   ./apps/deepinScreenshot.sh
+fi
+
+if [ $peek == "y" ];
+then
+  ./apps/peek.sh
 fi
 
 if [ $mega == "y" -a $system -eq 1 ];
