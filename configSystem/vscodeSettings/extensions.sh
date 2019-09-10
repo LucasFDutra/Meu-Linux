@@ -30,8 +30,14 @@ code --install-extension MS-vsliveshare.vsliveshare
 # Material Icon Theme
 code --install-extension PKief.material-icon-theme
 
+# Node Exec
+code --install-extension miramac.vscode-exec-node
+
 # Polacode
 code --install-extension pnp.polacode
+
+# Prettier - Code formatter
+code --install-extension esbenp.prettier-vscode
 
 # Watch in Chrome
 code --install-extension sneezry.watch-in-chrome
