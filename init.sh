@@ -269,22 +269,12 @@ then
   ./apps/deepinScreenshot.sh
 fi
 
-<<<<<<< HEAD
 if [ $peek == "y" ];
 then
   ./apps/peek.sh
 fi
 
-if [ $mega == "y" -a $system -eq 1 ];
-then
-  wget
-  sudo dpkg -i
-fi
-
-if [ $mega == "y" -a $system -eq 2 ];
-=======
 if [ $mega == "y" ];
->>>>>>> 0e27cff3792fac95c687605831ebd3843a28cbfb
 then
   wget https://mega.nz/linux/MEGAsync/xUbuntu_18.04/amd64/megasync-xUbuntu_18.04_amd64.deb
   sudo dpkg -i megasync-xUbuntu_18.04_amd64.deb
