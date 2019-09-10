@@ -321,10 +321,33 @@ then
   echo -n "Deseja adicionar snippets ao VScode? [y/n]: "
   read snippetsVSCode
 
+  echo -n "Deseja adicionar fontes? [y/n]"
+  read codeFontes
+
+  echo -n "Deseja configurar o VScode? [y/n]"
+  read vscodeSettings
+
   if [ $snippetsVSCode == "y" ];
   then
     cd configSystem/snippetsVSCode
     ./addSnippets.sh
+    cd ..
+    cd ..
+  fi
+
+  if [ $codeFontes == "y" ];
+  then
+    cd configSystem/fonts
+    ./fonts.sh
+    cd ..
+    cd ..
+  fi
+
+  if [ $vscodeSettings == "y" ];
+  then
+    cd configSystem/vscodeSettings
+    ./vscodeSettings.sh
+    ./extensions.sh
     cd ..
     cd ..
   fi
