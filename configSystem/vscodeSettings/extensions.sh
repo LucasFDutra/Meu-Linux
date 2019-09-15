@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# Bookmarks
+code --install-extension alefragnani.Bookmarks
+
 # Bracket Pair Colorizer 2
 code --install-extension CoenraadS.bracket-pair-colorizer-2
 
@@ -38,6 +41,12 @@ code --install-extension pnp.polacode
 
 # Prettier - Code formatter
 code --install-extension esbenp.prettier-vscode
+
+# Python
+code --install-extension ms-python.python
+
+# Todo Tree
+code --install-extension Gruntfuggly.todo-tree
 
 # Watch in Chrome
 code --install-extension sneezry.watch-in-chrome
