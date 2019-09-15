@@ -1,7 +1,6 @@
 #!/bin/bash
 
 yarn add eslint -D
-yarn add babel-eslint -D
 yarn add eslint-config-airbnb -D
 yarn add eslint-plugin-import -D
 yarn add eslint-plugin-jsx-a11y -D
