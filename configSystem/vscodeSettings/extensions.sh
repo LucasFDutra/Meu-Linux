@@ -24,6 +24,9 @@ code --install-extension EditorConfig.EditorConfig
 # ESLint
 code --install-extension dbaeumer.vscode-eslint
 
+# Excel Viewer
+code --install-extension GrapeCity.gc-excelviewer
+
 # GitLens — Git supercharged
 code --install-extension eamodio.gitlens
 
@@ -44,6 +47,9 @@ code --install-extension esbenp.prettier-vscode
 
 # Python
 code --install-extension ms-python.python
+
+# Rainbow CSV
+code --install-extension mechatroner.rainbow-csv
 
 # Todo Tree
 code --install-extension Gruntfuggly.todo-tree
