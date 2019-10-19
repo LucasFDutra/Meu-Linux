@@ -5,6 +5,12 @@ cd ~/github
 # Ambiente-React-E-React-native-Com-ESlint-Airbnb
 git clone git@github.com:LucasFDutra/Ambiente-React-E-React-native-Com-ESlint-Airbnb.git
 
+# analise-de-consumo
+git clone git@github.com:LucasFDutra/analise-de-consumo.git
+
+# analise-de-aumento-de-demanda
+git clone git@github.com:LucasFDutra/analise-de-aumento-de-demanda.git
+
 # Conversor-Boost-Quadratico
 git clone git@github.com:LucasFDutra/Conversor-Boost-Quadratico.git
 
@@ -13,6 +19,9 @@ git clone git@github.com:LucasFDutra/Dinamica.git
 
 # Fogo-Do-Doom
 git clone git@github.com:LucasFDutra/Fogo-Do-Doom.git
+
+# linked-list-C
+git clone git@github.com:LucasFDutra/linked-list-C.git
 
 # meu linux
 git clone git@github.com:LucasFDutra/Meu-Linux.git
