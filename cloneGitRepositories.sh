@@ -2,6 +2,9 @@
 
 cd ~/github
 
+# aircnc
+git clone git@github.com:LucasFDutra/aircnc.git
+
 # Ambiente-React-E-React-native-Com-ESlint-Airbnb
 git clone git@github.com:LucasFDutra/Ambiente-React-E-React-native-Com-ESlint-Airbnb.git
 
