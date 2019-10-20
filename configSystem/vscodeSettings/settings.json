@@ -18,4 +18,11 @@
   "editor.fontSize": 15,
   "editor.fontLigatures": true,
   "editor.renderLineHighlight": "gutter",
+  "git.autofetch": true,
+  "emmet.syntaxProfiles": {
+    "javascript": "jsx"
+  },
+  "emmet.includeLanguages": {
+    "javascript": "javascriptreact"
+  }
 }
