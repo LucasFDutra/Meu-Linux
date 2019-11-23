@@ -1,9 +1,16 @@
 #!/bin/bash
 
+cd ~
+
+mkdir github
+
 cd ~/github
 
 # aircnc
 git clone git@github.com:LucasFDutra/aircnc.git
+
+# Algoritmo-Multi-Agente-Aplicado-a-Entrega-e-Coleta-de-Objetos
+git clone git@github.com:LucasFDutra/Algoritmo-Multi-Agente-Aplicado-a-Entrega-e-Coleta-de-Objetos.git
 
 # Ambiente-React-E-React-native-Com-ESlint-Airbnb
 git clone git@github.com:LucasFDutra/Ambiente-React-E-React-native-Com-ESlint-Airbnb.git
@@ -22,6 +29,9 @@ git clone git@github.com:LucasFDutra/Dinamica.git
 
 # Fogo-Do-Doom
 git clone git@github.com:LucasFDutra/Fogo-Do-Doom.git
+
+# grafo-c
+git clone git@github.com:LucasFDutra/grafo-c.git
 
 # linked-list-C
 git clone git@github.com:LucasFDutra/linked-list-C.git
@@ -46,6 +56,9 @@ git clone git@github.com:yleseverino/muly.git
 
 # Semana-Omnistack-8
 git clone git@github.com:LucasFDutra/semana-omnistack-8.git
+
+# Sorting-Algorithms-c
+git clone git@github.com:LucasFDutra/Sorting-Algorithms-c.git
 
 # TCC
 git clone git@github.com:LucasFDutra/TCC.git
