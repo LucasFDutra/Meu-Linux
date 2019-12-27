@@ -19,8 +19,6 @@ yarn add eslint-plugin-react -D
 
 yarn add babel-eslint
 
-react-native run-android
+gnome-terminal -- react-native start
 
 notify-send "The application is ready!"
-
-react-native start
