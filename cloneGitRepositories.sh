@@ -66,5 +66,8 @@ git clone git@github.com:LucasFDutra/TCC.git
 # tindev semana OmniStack
 git clone git@github.com:LucasFDutra/tindev-semana-OmniStack.git
 
+#ToDo List
+git clone git@github.com:LucasFDutra/toDo-List.git
+
 # Video maker
 git clone git@github.com:LucasFDutra/video-maker.git
