@@ -19,6 +19,10 @@ yarn add eslint-plugin-react -D
 
 yarn add babel-eslint
 
+wget https://raw.githubusercontent.com/LucasFDutra/Ambiente-React-E-React-native-Com-ESlint-Airbnb/master/.editorconfig
+
+wget https://raw.githubusercontent.com/LucasFDutra/Ambiente-React-E-React-native-Com-ESlint-Airbnb/master/.eslintrc.json
+
 gnome-terminal -- react-native start
 
 notify-send "The application is ready!"
