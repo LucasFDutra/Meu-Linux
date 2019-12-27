@@ -10,8 +10,6 @@
   "editor.renderWhitespace": "all",
   "workbench.startupEditor": "newUntitledFile",
   "javascript.updateImportsOnFileMove.enabled": "always",
-  "editor.formatOnSave": true,
-  "eslint.autoFixOnSave": true,
   "terminal.integrated.rendererType": "dom",
   "workbench.colorTheme": "Dracula",
   "editor.fontFamily": "Fira Code",
@@ -24,5 +22,8 @@
   },
   "emmet.includeLanguages": {
     "javascript": "javascriptreact"
+  },
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true
   }
 }
