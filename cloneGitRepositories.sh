@@ -60,9 +60,6 @@ git clone git@github.com:LucasFDutra/semana-omnistack-8.git
 # Sorting-Algorithms-c
 git clone git@github.com:LucasFDutra/Sorting-Algorithms-c.git
 
-# TCC
-git clone git@github.com:LucasFDutra/TCC.git
-
 # tindev semana OmniStack
 git clone git@github.com:LucasFDutra/tindev-semana-OmniStack.git
 
