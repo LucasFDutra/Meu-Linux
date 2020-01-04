@@ -1,0 +1,37 @@
+{
+	"Create React Component": {
+		"prefix": "rc",
+		"body": [
+			"import React from 'react';"
+			"import './styles.css';"
+			""
+			"const ${1:functionName} = () => {"
+			"	return("
+			"		<div>"
+			"			"
+			"		</div>"
+			"	);"
+			"}"
+			""
+			"export default ${1:functionName};"
+		]
+	},
+
+	"Create React Component Whith Hooks": {
+		"prefix": "rch",
+		"body": [
+			"import React, { useState, useEffect } from 'react';"
+			"import './styles.css';"
+			""
+			"const ${1:functionName} = () => {"
+			"	return("
+			"		<div>"
+			"			"
+			"		</div>"
+			"	);"
+			"}"
+			""
+			"export default ${1:functionName};"
+		]
+	}
+}
