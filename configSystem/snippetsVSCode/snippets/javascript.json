@@ -2,36 +2,80 @@
 	"Create React Component": {
 		"prefix": "rc",
 		"body": [
-			"import React from 'react';"
-			"import './styles.css';"
-			""
-			"const ${1:functionName} = () => {"
-			"	return("
-			"		<div>"
-			"			"
-			"		</div>"
-			"	);"
-			"}"
-			""
-			"export default ${1:functionName};"
+			"import React from 'react';",
+			"import './styles.css';",
+			"",
+			"const ${1:functionName} = () => {",
+			"	return(",
+			"		<div>",
+			"			",
+			"		</div>",
+			"	);",
+			"}",
+			"",
+			"export default ${1:functionName};",
 		]
 	},
 
 	"Create React Component Whith Hooks": {
 		"prefix": "rch",
 		"body": [
-			"import React, { useState, useEffect } from 'react';"
-			"import './styles.css';"
-			""
-			"const ${1:functionName} = () => {"
-			"	return("
-			"		<div>"
-			"			"
-			"		</div>"
-			"	);"
-			"}"
-			""
-			"export default ${1:functionName};"
+			"import React, { useState, useEffect } from 'react';",
+			"import './styles.css';",
+			"",
+			"const ${1:functionName} = () => {",
+			"	return(",
+			"		<div>",
+			"			",
+			"		</div>",
+			"	);",
+			"}",
+			"",
+			"export default ${1:functionName};",
 		]
+	},
+
+	"useEffect": {
+		"prefix": "ue",
+		"body": [
+			"useEffect(() => {$1",
+			"	",
+			"}, []);",
+			"",
+		]	
+	},
+
+	"useState": {
+		"prefix": "us",
+		"body": "const [${1:variable}, set${2}${1:variable}] = useState(${3});"
+	},
+
+	"console.log": {
+		"prefix": "conlog",
+		"body": "console.log($1);"
+	},
+
+	"arrow function": {
+		"prefix": "arrow",
+		"body": [
+			"const $1 = () => {",
+			"	",
+			"};"
+		]
+	},
+
+	"anonymous function": {
+		"prefix": "anonymous function",
+		"body": "() => { $1 };",
+	},
+
+	"event.target.value": {
+		"prefix": "etv",
+		"body": "event.target.value",
+	},
+
+	"console log aqui": {
+		"prefix": "aqui",
+		"body": "console.log('aqui');"
 	}
 }

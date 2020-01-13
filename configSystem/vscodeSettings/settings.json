@@ -25,5 +25,8 @@
   },
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
-  }
+  },
+  "pomodoro.pauseTime": 20,
+  "pomodoro.repeat": 1,
+  "pomodoro.workTime": 40
 }
