@@ -87,6 +87,8 @@ echo -n "Deseja instalar deepin screenshot? [y/n]: "
 read deepinScreenshot
 echo -n "Deseja instalar Peek? [y/n]: "
 read peek
+echo -n "Deseja instalar Flameshot? [y/n]: "
+read flameshot
 echo -n "Deseja instalar mega? [y/n]: "
 read mega
 echo -n "Deseja instalar VS code? [y/n]: "
@@ -280,6 +282,11 @@ fi
 if [ $peek == "y" ];
 then
   ./apps/peek.sh
+fi
+
+if [ $flameshot == "y" ];
+then
+  ./apps/flameshot.sh
 fi
 
 if [ $mega == "y" ];
