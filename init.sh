@@ -46,6 +46,8 @@ echo -n "Deseja instalar node? [y/n]: "
 read node
 echo -n "Deseja instalar yarn? [y/n]: "
 read yarn
+echo -n "Deseja instalar expo? [y/n]: "
+read expo
 echo -n "Deseja instalar electron? [y/n]: "
 read electron
 echo -n "Deseja instalar python? [y/n]: "
@@ -122,6 +124,11 @@ fi
 if [ $yarn == "y" ];
 then
   ./apps/yarn.sh
+fi
+
+if [ $expo == "y" ];
+then
+  ./apps/expo.sh
 fi
 
 if [ $electron == "y" ];
