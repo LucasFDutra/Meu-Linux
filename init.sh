@@ -18,14 +18,11 @@ then
   read synaptic
   echo -n "Deseja instalar Gnome tweak? [y/n]: "
   read gnomeTweak
-  echo -n "Deseja instalar Gimp? [y/n]: "
-  read gimp
   echo -n "Deseja instalar Transmission? [y/n]: "
   read transmission
   echo -n "Deseja instalar Libreoffice? [y/n]: "
   read libreoffice
-  echo -n "Deseja instalar VLC? [y/n]: "
-  read vlc
+
   echo -n "Deseja instalar Timeshift? [y/n]: "
   read timeshift
 elif [ $system -eq 2 ];
@@ -38,6 +35,10 @@ else
   exit
 fi
 
+echo -n "Deseja instalar Gimp? [y/n]: "
+read gimp
+echo -n "Deseja instalar VLC? [y/n]: "
+read vlc
 echo -n "Deseja instalar codecs? [y/n]: "
 read codecs
 echo -n "Deseja instalar github? [y/n]: "
