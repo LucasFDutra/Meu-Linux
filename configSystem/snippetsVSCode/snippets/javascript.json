@@ -17,19 +17,23 @@
 		]
 	},
 
-	"Create React Component Whith Hooks": {
-		"prefix": "rch",
+	"Create React native Component": {
+		"prefix": "rnc",
 		"body": [
-			"import React, { useState, useEffect } from 'react';",
-			"import './styles.css';",
+			"import React from 'react';",
+			"import {StyleSheet, Text, View} from 'react-native';",
 			"",
 			"const ${1:functionName} = () => {",
 			"	return(",
-			"		<div>",
+			"		<View>",
 			"			",
-			"		</div>",
+			"		</View>",
 			"	);",
 			"}",
+			"",
+			"const styles = StyleSheet.create({",
+			"	",
+			"});",
 			"",
 			"export default ${1:functionName};",
 		]
