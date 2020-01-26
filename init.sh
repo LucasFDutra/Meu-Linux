@@ -93,6 +93,8 @@ echo -n "Deseja instalar mega? [y/n]: "
 read mega
 echo -n "Deseja instalar VS code? [y/n]: "
 read code
+echo -n "Deseja instalar LAMP? [y/n]: "
+read lamp
 
 echo -n "pressione ENTER para continuar "
 read
@@ -301,6 +303,11 @@ then
   wget https://az764295.vo.msecnd.net/stable/3db7e09f3b61f915d03bbfa58e258d6eee843f35/code_1.38.0-1567547996_amd64.deb
   sudo dpkg -i code_1.38.0-1567547996_amd64.deb
   rm code_1.38.0-1567547996_amd64.deb
+fi
+
+if [ $lamp == "y" ];
+then
+  ./apps/LAMP.sh
 fi
 
 echo -n "pressione ENTER para continuar "
