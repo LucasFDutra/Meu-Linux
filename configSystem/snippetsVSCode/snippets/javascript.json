@@ -5,15 +5,16 @@
 			"import React from 'react';",
 			"import './styles.css';",
 			"",
-			"const ${1:functionName} = () => {",
+			"const ${1:functionName} = (props) => {",
 			"	return(",
 			"		<div>",
-			"			",
+			"			$0",
 			"		</div>",
 			"	);",
 			"}",
 			"",
 			"export default ${1:functionName};",
+            "",
 		]
 	},
 
@@ -23,10 +24,10 @@
 			"import React from 'react';",
 			"import {StyleSheet, Text, View} from 'react-native';",
 			"",
-			"const ${1:functionName} = () => {",
+			"const ${1:functionName} = (props) => {",
 			"	return(",
 			"		<View>",
-			"			",
+			"			$0",
 			"		</View>",
 			"	);",
 			"}",
@@ -36,15 +37,16 @@
 			"});",
 			"",
 			"export default ${1:functionName};",
+            "",
 		]
 	},
 
 	"useEffect": {
 		"prefix": "ue",
 		"body": [
-			"useEffect(() => {$1",
-			"	",
-			"}, []);",
+			"useEffect(() => {",
+			"	$0",
+			"}, [$1]);",
 			"",
 		]	
 	},
@@ -56,21 +58,21 @@
 
 	"console.log": {
 		"prefix": "conlog",
-		"body": "console.log($1);"
+		"body": "console.log($0);"
 	},
 
 	"arrow function": {
 		"prefix": "arrow",
 		"body": [
-			"const $1 = () => {",
-			"	",
+			"const $1 = ($2) => {",
+			"	$0",
 			"};"
 		]
 	},
 
 	"anonymous function": {
 		"prefix": "anonymous function",
-		"body": "() => { $1 };",
+		"body": "($1) => { $0 };",
 	},
 
 	"event.target.value": {
