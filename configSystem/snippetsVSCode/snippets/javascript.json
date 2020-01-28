@@ -81,5 +81,15 @@
 	"console log aqui": {
 		"prefix": "aqui",
 		"body": "console.log('aqui');"
+	},
+
+	"Text": {
+		"prefix": "text",
+		"body": "<Text>$0</Text>",
+	},
+	
+	"View": {
+		"prefix": "view",
+		"body": "<View>$0</View>",
 	}
 }
