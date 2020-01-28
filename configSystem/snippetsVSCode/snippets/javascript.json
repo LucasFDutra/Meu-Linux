@@ -87,11 +87,16 @@
 
 	"Text": {
 		"prefix": "text",
-		"body": "<Text>$0</Text>",
+		"body": "<Text>$0</Text>"
 	},
 	
 	"View": {
 		"prefix": "view",
-		"body": "<View>$0</View>",
+		"body": "<View>$0</View>"
+	},
+
+	"style": {
+		"prefix": "style",
+		"body": "style={styles.$0}"
 	}
 }
