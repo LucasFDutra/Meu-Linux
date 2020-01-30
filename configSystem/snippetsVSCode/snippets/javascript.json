@@ -98,5 +98,14 @@
 	"style": {
 		"prefix": "style",
 		"body": "style={styles.$0}"
+	},
+
+	"configure style": {
+		"prefix": "nss",
+		"body": [
+			"${1:styleName}: {",
+			"	$0",
+			"},",
+		]
 	}
 }
