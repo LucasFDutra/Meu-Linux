@@ -54,6 +54,9 @@ git clone git@github.com:LucasFDutra/minhas-series-server.git
 # muly
 git clone git@github.com:yleseverino/muly.git
 
+#php
+git clone git@github.com:LucasFDutra/php.git
+
 # Semana-Omnistack-8
 git clone git@github.com:LucasFDutra/semana-omnistack-8.git
 
