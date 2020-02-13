@@ -112,5 +112,20 @@
 	"import": {
 		"prefix": "import",
 		"body": "import { $0 } from '$1';",
+	},
+
+	"Routes": {
+		"prefix": "Routes",
+		"body": [
+			"import { createAppContainer } from 'react-navigation';",
+			"import { createStackNavigator } from 'react-navigation-stack';",
+
+			"const Routes = createAppContainer(",
+			"  createStackNavigator({",
+			"    $0",
+			"  }),",
+			");",
+			"export default Routes;",
+		]
 	}
 }
