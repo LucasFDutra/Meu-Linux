@@ -53,7 +53,7 @@
 
 	"useState": {
 		"prefix": "us",
-		"body": "const [${1:variable}, set${2}${1:variable}] = useState(${3});"
+		"body": "const [${1:variable}, set${2}${1:variable}] = useState(${0});"
 	},
 
 	"console.log": {
@@ -107,5 +107,10 @@
 			"	$0",
 			"},",
 		]
+	},
+
+	"import": {
+		"prefix": "import",
+		"body": "import { $0 } from '$1';",
 	}
 }
