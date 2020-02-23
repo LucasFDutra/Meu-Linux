@@ -6,7 +6,7 @@ read appName
 echo -n "Deseja instalar react-navigation? [y/n]: "
 read reactNavigation
 
-if [$reactNavigation == "y"];
+if [ $reactNavigation == "y" ];
 then
   echo - n "stack navigator? [y/n]: "
   read stack
@@ -22,9 +22,17 @@ read redux
 echo -n "Deseja instalar axios? [y/n]: "
 read axios
 
+echo -n "pressione ENTER para continuar"
+read
+clear
+
 #----------------------------Criando expo project-----------------------------#
 expo init $appName
 cd $appName
+
+echo -n "pressione ENTER para continuar"
+read
+clear
 
 #-------------------------Criando estrutura de pastas-------------------------#
 mkdir src
@@ -34,20 +42,20 @@ mkdir src/constants
 >src/constants/Colors.js
 mkdir src/screens
 
-if [$axios == "y"];
+if [ $axios == "y" ];
 then
   mkdir src/services
   >src/services/api.js
 fi
 
-if [$redux == "y"];
+if [ $redux == "y" ];
 then
   mkdir src/store
   mkdir src/store/actions
   mkdir src/store/reducers
 fi
 
-if [$reactNavigation == "y"];
+if [ $reactNavigation == "y" ];
 then
 >src/routes.js
 fi
@@ -62,19 +70,19 @@ then
 fi
 
 #stack navigator
-if [$stack == "y"];
+if [ $stack == "y" ];
 then
   expo install @react-navigation/stack
 fi
 
 #drawer navigator
-if [$drawer == "y"];
+if [ $drawer == "y" ];
 then
   expo install @react-navigation/drawer
 fi
 
 #bottom navigator
-if [$bottom == "y"];
+if [ $bottom == "y" ];
 then
   expo install @react-navigation/bottom-tabs
   expo install @react-navigation/material-bottom-tabs react-native-paper
@@ -87,7 +95,7 @@ then
 fi
 
 #axios
-if [$axios == "y"];
+if [ $axios == "y" ];
 then
   yarn add axios
 fi

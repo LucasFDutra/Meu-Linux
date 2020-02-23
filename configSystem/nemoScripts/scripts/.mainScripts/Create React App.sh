@@ -22,13 +22,13 @@ mkdir src/constants
 >src/constants/Colors.js
 mkdir src/screens
 
-if [$axios == "y"];
+if [ $axios == "y" ];
 then
   mkdir src/services
   >src/services/api.js
 fi
 
-if [$redux == "y"];
+if [ $redux == "y" ];
 then
   mkdir src/store
   mkdir src/store/actions
@@ -43,7 +43,7 @@ then
 fi
 
 #axios
-if [$axios == "y"];
+if [ $axios == "y" ];
 then
   yarn add axios
 fi
