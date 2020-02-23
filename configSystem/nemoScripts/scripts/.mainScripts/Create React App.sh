@@ -13,6 +13,28 @@ read axios
 create-react-app $appName
 cd $appName
 
+#-------------------------Criando estrutura de pastas-------------------------#
+mkdir src
+>src/routes.js
+mkdir src/assets
+mkdir src/components
+mkdir src/constants
+>src/constants/Colors.js
+mkdir src/screens
+
+if [$axios == "y"];
+then
+  mkdir src/services
+  >src/services/api.js
+fi
+
+if [$redux == "y"];
+then
+  mkdir src/store
+  mkdir src/store/actions
+  mkdir src/store/reducers
+fi
+
 #---------------------------------instalações---------------------------------#
 #redux
 if [ $redux == "y" ];
