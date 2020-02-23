@@ -1,137 +1,289 @@
 {
-	"Create React Component": {
-		"prefix": "rc",
-		"body": [
-			"import React from 'react';",
-			"import './styles.css';",
-			"",
-			"const ${1:functionName} = (props) => {",
-			"	//",
-			"	return(",
-			"		<div>",
-			"			$0",
-			"		</div>",
-			"	);",
-			"}",
-			"",
-			"export default ${1:functionName};",
-            "",
-		]
-	},
+  "Create React Component": {
+    "prefix": "rc",
+    "body": [
+      "import React from 'react';",
+      "import './styles.css';",
+      "",
+      "const ${1:functionName} = (props) => {",
+      " //",
+      " return(",
+      "   <div>",
+      "     $0",
+      "   </div>",
+      " );",
+      "}",
+      "",
+      "export default ${1:functionName};",
+      ""
+    ],
+    "description": "create a new react js component"
+  },
 
-	"Create React native Component": {
-		"prefix": "rnc",
-		"body": [
-			"import React from 'react';",
-			"import {",
-			"	StyleSheet,",
-			"	Text,",
-			"	View,",
-			"} from 'react-native';",
-			"",
-			"const ${1:functionName} = (props) => {",
-			"	//",
-			"	return(",
-			"		<View>",
-			"			$0",
-			"		</View>",
-			"	);",
-			"}",
-			"",
-			"const styles = StyleSheet.create({",
-			"	",
-			"});",
-			"",
-			"export default ${1:functionName};",
-            "",
-		]
-	},
+  "Create React native Component": {
+    "prefix": "rnc",
+    "body": [
+      "import React from 'react';",
+      "import {",
+      " StyleSheet,",
+      " Text,",
+      " View,",
+      "} from 'react-native';",
+      "",
+      "const ${1:functionName} = (props) => {",
+      " //",
+      " return (",
+      "   <View>",
+      "     $0",
+      "   </View>",
+      " );",
+      "}",
+      "",
+      "const styles = StyleSheet.create({",
+      "",
+      "});",
+      "",
+      "export default ${1:functionName};",
+      ""
+    ],
+    "description": "create a new react-native component"
+  },
 
-	"useEffect": {
-		"prefix": "ue",
-		"body": [
-			"useEffect(() => {",
-			"	$0",
-			"}, [$1]);",
-			"",
-		]	
-	},
+  "navigation": {
+    "prefix": "navigation",
+    "body": [
+      "import { createAppContainer } from '@react-navigation/native';",
+      "",
+      "$0",
+      "export default createAppContainer($1);"
+    ],
+    "description": "create new navigation structure"
+  },
 
-	"useState": {
-		"prefix": "us",
-		"body": "const [${1:variable}, set${2}${1:variable}] = useState(${0});"
-	},
+  "stack navigator": {
+    "prefix": "stackNavigator",
+    "body": [
+      "const ${1:navigatorName} = createStackNavigator({",
+      "  $0",
+      "}, {",
+      "  defaultNavigationOptions: {",
+      "    $1",
+      "  },",
+      "});"
+    ],
+    "description": "create a stack navigator"
+  },
 
-	"console.log": {
-		"prefix": "conlog",
-		"body": "console.log($0);"
-	},
+  "drawer navigator": {
+    "prefix": "drawerNavigator",
+    "body": [
+      "const ${1:navigatorName} = createDrawerNavigator({",
+      "  $0",
+      "}, {",
+      "  defaultNavigationOptions: {",
+      "    $1",
+      "  },",
+      "});"
+    ],
+    "description": "create a drawer navigator"
+  },
 
-	"arrow function": {
-		"prefix": "arrow",
-		"body": [
-			"const $1 = ($2) => {",
-			"	$0",
-			"};"
-		]
-	},
+  "Route": {
+    "prefix": "bottomNavigator",
+    "body": [
+      "const ${1:navigatorName} = Platform.OS === 'android'",
+      "  ? createMaterialBottomTabNavigator(",
+      "    tabScreenConfig,",
+      "    {",
+      "      activeColor: '${2:color}',",
+      "      shifting: true,",
+      "    },",
+      "  )",
+      "  : createBottomTabNavigator(",
+      "    tabScreenConfig,",
+      "    {",
+      "      tabBarOptions: {",
+      "        activeTintColor: '${2:color}',",
+      "      },",
+      "    },",
+      "  );"
+    ],
+    "description": "create a bottom navigator"
+  },
 
-	"anonymous function": {
-		"prefix": "anonymous function",
-		"body": "($1) => { $0 }",
-	},
+  "new Basic Route": {
+    "prefix": "nbsr",
+    "body": [
+      "${1:routeName}: {",
+      "  screen: ${2:screenName},",
+      "  navigationOptions: {",
+      "    title: '${3:title}',",
+      "  },",
+      "},",
+      "$0"
+    ],
+    "description": "create a basic route for stack and drawer navigators"
+  },
 
-	"event.target.value": {
-		"prefix": "etv",
-		"body": "event.target.value",
-	},
+  "new Bottom Route": {
+    "prefix": "nbtr",
+    "body": [
+      "${1:tabName}: {",
+      "  screen: ${2:screenName},",
+      "  navigationOptions: {",
+      "    tabBarIcon: (tabInfo) => <Ionicons name='${3:iconName}' size={25} color={tabInfo.tintColor} />,",
+      "    tabBarColor: '${3:color}',",
+      "  },",
+      "},",
+      "$0"
+    ],
+    "description": "create a bottom tab route for bottom navigator"
+  },
 
-	"console log aqui": {
-		"prefix": "aqui",
-		"body": "console.log('aqui');"
-	},
+  "new Bottom Routes Container": {
+    "prefix": "nbrc",
+    "body": [
+      "const tabScreenConfig = {",
+      "  ${0}",
+      "};"
+    ],
+    "description": "create a object to comporte all bottom routes"
+  },
 
-	"Text": {
-		"prefix": "text",
-		"body": "<Text>$0</Text>"
-	},
-	
-	"View": {
-		"prefix": "view",
-		"body": "<View>$0</View>"
-	},
+  "Text": {
+    "prefix": "text",
+    "body": "<Text>$0</Text>",
+    "description": "create a text component"
+  },
 
-	"style": {
-		"prefix": "style",
-		"body": "style={styles.$0}"
-	},
+  "View": {
+    "prefix": "view",
+    "body": "<View>$0</View>",
+    "description": "create a view component"
+  },
 
-	"configure style": {
-		"prefix": "nss",
-		"body": [
-			"${1:styleName}: {",
-			"	$0",
-			"},",
-		]
-	},
-
-	"import": {
+  "import": {
 		"prefix": "import",
-		"body": "import { $0 } from '$1';",
+    "body": "import { $0 } from '$1';",
+    "description": "import"
 	},
 
-	"Routes": {
-		"prefix": "Routes",
-		"body": [
-			"import { createAppContainer } from 'react-navigation';",
-			"import { createStackNavigator } from 'react-navigation-stack';",
+  "import platform": {
+    "prefix": "impPlatform",
+    "body": [
+      "import { Platform } from 'react-native';",
+    ],
+    "description": " platform"
+  },
 
-			"const Routes = createAppContainer(",
-			"  createStackNavigator({",
-			"    $0",
-			"  }),",
-			");",
-			"export default Routes;",
-		]
-	}
+  "createAppContainer": {
+    "prefix": "impReactNavigator",
+    "body": [
+      "import { createAppContainer } from '@react-navigation/native';",
+    ],
+    "description": "Import React Navigator"
+  },
+
+
+  "createStackNavigator": {
+    "prefix": "impStackNavigator",
+    "body": [
+      "import { createStackNavigator } from '@react-navigation/stack';",
+    ],
+    "description": "Import Stack Navigator"
+  },
+
+  "createDrawerNavigator": {
+    "prefix": "impDrawerNavigator",
+    "body": [
+      "import { createDrawerNavigator } from '@react-navigation/drawer';",
+    ],
+    "description": "Import Drawer Navigator"
+  },
+
+
+  "createBottomTabNavigator": {
+    "prefix": "impBottomNavigator",
+    "body": [
+      "import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';",
+    ],
+    "description": "Import Bottom Navigator"
+  },
+
+  "createMaterialBottomTabNavigator": {
+    "prefix": "impBottomMaterialNavigator",
+    "body": [
+      "import { createMaterialBottomTabNavigator } from '@react-navigation/material-bottom-tabs';",
+    ],
+    "description": "Import Bottom Material Navigator"
+  },
+
+  "Ionicons": {
+    "prefix": "impIonicons",
+    "body": [
+      "import { Ionicons } from '@expo/vector-icons';",
+    ],
+    "description": "Import Ionicons"
+  },
+
+  "useEffect": {
+    "prefix": "ue",
+    "body": [
+      "useEffect(() => {",
+      " $0",
+      "}, [$1]);",
+      ""
+    ],
+    "description": "use effect"
+  },
+
+  "useState": {
+    "prefix": "us",
+    "body": "const [${1:variable}, set${2}${1:variable}] = useState(${0});",
+    "description": "use state"
+	},
+
+  "arrow function": {
+    "prefix": "arrow",
+    "body": [
+      "const $1 = ($2) => {",
+      " $0",
+      "};"
+    ],
+    "description": "arrow function"
+  },
+
+  "anonymous function": {
+    "prefix": "anonymous function",
+    "body": "($1) => { $0 }",
+    "description": "anonymous function"
+  },
+
+  "style": {
+    "prefix": "style",
+    "body": "style={styles.$0}",
+    "description": "style"
+  },
+
+  "configure style": {
+    "prefix": "nss",
+    "body": [
+      "${1:styleName}: {",
+      " $0",
+      "},"
+    ],
+    "description": "new style sheete object"
+  },
+
+  "console.log": {
+    "prefix": "conlog",
+    "body": "console.log($0);",
+    "description": "console log"
+  },
+
+  "console log aqui": {
+    "prefix": "aqui",
+    "body": "console.log('aqui');",
+    "description": "debug aplication"
+  }
 }
