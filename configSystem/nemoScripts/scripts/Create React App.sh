@@ -1,3 +1,3 @@
 #! /bin/bash
 
-gnome-terminal -- "~/github/Meu-Linux/Create React App.sh"
+gnome-terminal -- ~/.local/share/nemo/scripts/.mainScripts/Create\ React\ App.sh

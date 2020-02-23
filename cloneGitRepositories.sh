@@ -71,3 +71,12 @@ git clone git@github.com:LucasFDutra/toDo-List.git
 
 # Video maker
 git clone git@github.com:LucasFDutra/video-maker.git
+
+#vscode-javascript-snippets
+git clone git@github.com:LucasFDutra/vscode-javascript-snippets.git
+
+#vscode-snippets-reactjs
+git clone git@github.com:LucasFDutra/vscode-snippets-reactjs.git
+
+#vscode-snippets-react-native
+git clone git@github.com:LucasFDutra/vscode-snippets-react-native.git

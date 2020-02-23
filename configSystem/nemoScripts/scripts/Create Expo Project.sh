@@ -1,3 +1,3 @@
 #! /bin/bash
 
-gnome-terminal -- ~/github/Meu-Linux/Create\ Expo\ Project.sh
+gnome-terminal -- ~/.local/share/nemo/scripts/.mainScripts/Create\ Expo\ Project.sh
