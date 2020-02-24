@@ -87,6 +87,7 @@ fi
 if [ $bottom == "y" ];
 then
   expo install react-navigation-tabs
+  expo install react-navigation-material-bottom-tabs react-native-paper
 fi
 
 if [ $hButtons == "y" ];
