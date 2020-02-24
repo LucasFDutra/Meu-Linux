@@ -93,7 +93,6 @@ fi
 if [ $hButtons == "y" ];
 then
   expo install react-navigation-header-buttons
-  expo install react-navigation-material-bottom-tabs react-native-paper
 fi
 
 #redux
