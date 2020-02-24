@@ -14,6 +14,8 @@ then
   read drawer
   echo - n "bottom navigator? [y/n]: "
   read bottom
+  echo -n "header buttons? [y/n]: "
+  read hButtons
 fi
 
 echo -n "Deseja instalar redux? [y/n]: "
@@ -65,27 +67,32 @@ fi
 #navigation
 if [ $reactNavigation == "y" ];
 then
-  expo install @react-navigation/native
+  expo install react-navigation
   expo install react-native-gesture-handler react-native-reanimated react-native-screens react-native-safe-area-context @react-native-community/masked-view
 fi
 
 #stack navigator
 if [ $stack == "y" ];
 then
-  expo install @react-navigation/stack
+  expo install react-navigation-stack @react-native-community/masked-view
 fi
 
 #drawer navigator
 if [ $drawer == "y" ];
 then
-  expo install @react-navigation/drawer
+  expo install react-navigation-drawer
 fi
 
 #bottom navigator
 if [ $bottom == "y" ];
 then
-  expo install @react-navigation/bottom-tabs
-  expo install @react-navigation/material-bottom-tabs react-native-paper
+  expo install react-navigation-tabs
+fi
+
+if [ $hButtons == "y" ];
+then
+  expo install react-navigation-header-buttons
+  expo install react-navigation-material-bottom-tabs react-native-paper
 fi
 
 #redux
