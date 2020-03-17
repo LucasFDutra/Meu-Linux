@@ -23,3 +23,4 @@ sudo pip3 install xgboost
 sudo pip3 install fbprophet
 sudo pip3 install SQLAlchemy
 sudo pip3 install progressbar2
+sudo pip3 install statsmodels
