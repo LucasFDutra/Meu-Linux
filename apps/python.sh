@@ -7,6 +7,8 @@ sudo apt-get install python3-setuptools -y
 sudo pip3 install --upgrade setuptools
 sudo python3 -m pip install --upgrade pip
 sudo python3 -m pip install jupyter
+sudo pip3 install jupyterthemes
+jt -f firacode -t chesterish -cellw 90%
 # Bibliotecas python
 sudo pip3 install tensorflow
 sudo pip3 install numpy
