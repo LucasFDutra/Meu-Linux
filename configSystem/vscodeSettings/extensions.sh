@@ -15,6 +15,9 @@ code --install-extension danielpinto8zz6.c-cpp-compile-run
 # Color Highlight
 code --install-extension naumovs.color-highlight
 
+# Create File & Folder
+code --install-extension ritwickdey.create-file-folder
+
 # Dracula Official
 code --install-extension dracula-theme.theme-dracula
 
