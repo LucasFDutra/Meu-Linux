@@ -63,6 +63,9 @@ git clone git@github.com:LucasFDutra/semana-omnistack-8.git
 # Sorting-Algorithms-c
 git clone git@github.com:LucasFDutra/Sorting-Algorithms-c.git
 
+# sql with node
+git clone git@github.com:LucasFDutra/sql-with-node.git
+
 # tindev semana OmniStack
 git clone git@github.com:LucasFDutra/tindev-semana-OmniStack.git
 
@@ -80,3 +83,4 @@ git clone git@github.com:LucasFDutra/vscode-snippets-reactjs.git
 
 #vscode-snippets-react-native
 git clone git@github.com:LucasFDutra/vscode-snippets-react-native.git
+
