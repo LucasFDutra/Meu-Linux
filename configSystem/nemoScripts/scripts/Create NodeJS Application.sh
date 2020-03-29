@@ -10,6 +10,7 @@ yarn add babel-eslint
 
 yarn add express
 yarn add nodemon -D
+yarn add cors
 
 wget https://raw.githubusercontent.com/LucasFDutra/Ambiente-React-E-React-native-Com-ESlint-Airbnb/master/.editorconfig
 wget https://raw.githubusercontent.com/LucasFDutra/Ambiente-React-E-React-native-Com-ESlint-Airbnb/master/.eslintrc.json
