@@ -84,3 +84,5 @@ git clone git@github.com:LucasFDutra/vscode-snippets-reactjs.git
 #vscode-snippets-react-native
 git clone git@github.com:LucasFDutra/vscode-snippets-react-native.git
 
+# vscode-snippets-nodejs
+git clone git@github.com:LucasFDutra/vscode-snippets-nodejs.git
