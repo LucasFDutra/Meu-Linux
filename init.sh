@@ -44,15 +44,6 @@ read codecs
 echo -n "Deseja instalar github? [y/n]: "
 read github
 echo -n "Deseja instalar node? [y/n]: "
-read node
-echo -n "Deseja instalar yarn? [y/n]: "
-read yarn
-echo -n "Deseja instalar expo? [y/n]: "
-read expo
-echo -n "Deseja instalar electron? [y/n]: "
-read electron
-echo -n "Deseja instalar python? [y/n]: "
-read python
 echo -n "Deseja instalar cpp compiler? [y/n]: "
 read cppCompiler
 echo -n "Deseja instalar rar? [y/n]: "
@@ -73,12 +64,8 @@ echo -n "Deseja instalar gparted? [y/n]: "
 read gparted
 echo -n "Deseja instalar inkscape? [y/n]: "
 read inkscape
-echo -n "Deseja instalar Insomnia? [y/n]: "
-read insomnia
 echo -n "Deseja instalar octave? [y/n]: "
 read octave
-echo -n "Deseja instalar scrcpy? [y/n]: "
-read scrcpy
 echo -n "Deseja instalar spotify? [y/n]: "
 read spotify
 echo -n "Deseja instalar sublime? [y/n]: "
@@ -91,10 +78,10 @@ echo -n "Deseja instalar Flameshot? [y/n]: "
 read flameshot
 echo -n "Deseja instalar mega? [y/n]: "
 read mega
-echo -n "Deseja instalar VS code? [y/n]: "
-read code
 echo -n "Deseja instalar LAMP? [y/n]: "
 read lamp
+echo -n "Deseja clonar repositórios? [y/n]: "
+read clone
 
 echo -n "pressione ENTER para continuar "
 read
@@ -119,31 +106,6 @@ fi
 if [ $github == "y" ];
 then
   ./apps/github.sh
-fi
-
-if [ $node == "y" ];
-then
-  ./apps/node.sh
-fi
-
-if [ $yarn == "y" ];
-then
-  ./apps/yarn.sh
-fi
-
-if [ $expo == "y" ];
-then
-  ./apps/expo.sh
-fi
-
-if [ $electron == "y" ];
-then
-  ./apps/electron.sh
-fi
-
-if [ $python == "y" ];
-then
-  ./apps/python.sh
 fi
 
 if [ $cppCompiler == "y" ];
@@ -226,11 +188,6 @@ then
   ./apps/inkscape.sh
 fi
 
-if [ $insomnia == "y" ];
-then
-  ./apps/Insomnia.sh
-fi
-
 if [ $libreoffice == "y" ];
 then
   ./apps/libreoffice.sh
@@ -239,11 +196,6 @@ fi
 if [ $octave == "y" ];
 then
   ./apps/octave.sh
-fi
-
-if [ $scrcpy == "y" ];
-then
-  ./apps/scrcpy.sh
 fi
 
 if [ $spotify == "y" ];
@@ -298,16 +250,15 @@ then
   rm megasync-xUbuntu_18.04_amd64.deb
 fi
 
-if [ $code == "y" ];
-then
-  wget https://az764295.vo.msecnd.net/stable/3db7e09f3b61f915d03bbfa58e258d6eee843f35/code_1.38.0-1567547996_amd64.deb
-  sudo dpkg -i code_1.38.0-1567547996_amd64.deb
-  rm code_1.38.0-1567547996_amd64.deb
-fi
-
 if [ $lamp == "y" ];
 then
   ./apps/LAMP.sh
+fi
+
+if [ $clone == "y" ];
+then
+  ./cloneGitRepositories.sh
+  ./my-development-environments/setup.sh
 fi
 
 echo -n "pressione ENTER para continuar "
@@ -333,43 +284,6 @@ then
   then
     cd configSystem/nemoScripts
     ./configNemoScripts.sh
-    cd ..
-    cd ..
-  fi
-fi
-
-if [ $code == "y" ];
-then
-  echo -n "Deseja adicionar snippets ao VScode? [y/n]: "
-  read snippetsVSCode
-
-  echo -n "Deseja adicionar fontes? [y/n]"
-  read codeFontes
-
-  echo -n "Deseja configurar o VScode? [y/n]"
-  read vscodeSettings
-
-  if [ $snippetsVSCode == "y" ];
-  then
-    cd configSystem/snippetsVSCode
-    ./addSnippets.sh
-    cd ..
-    cd ..
-  fi
-
-  if [ $codeFontes == "y" ];
-  then
-    cd configSystem/fonts
-    ./fonts.sh
-    cd ..
-    cd ..
-  fi
-
-  if [ $vscodeSettings == "y" ];
-  then
-    cd configSystem/vscodeSettings
-    ./vscodeSettings.sh
-    ./extensions.sh
     cd ..
     cd ..
   fi

@@ -1,7 +1,0 @@
-{
-  "console log aqui": {
-    "prefix": "aqui",
-    "body": "console.log('aqui');",
-    "description": "debug aplication"
-  }
-}
