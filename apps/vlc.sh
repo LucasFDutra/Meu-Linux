@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo apt install vlc -y
+sudo snap install vlc

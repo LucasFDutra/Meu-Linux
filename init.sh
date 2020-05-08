@@ -22,7 +22,13 @@ then
   read transmission
   echo -n "Deseja instalar Libreoffice? [y/n]: "
   read libreoffice
-
+  echo -n "Deseja install o nemo? [y/n]"
+  read nemo
+  if [ $nemo == "y" ];
+  then
+    echo -n "Deseja adicionar scripts ao nemo? [y/n]: "
+    read nemoScripts
+  fi
   echo -n "Deseja instalar Timeshift? [y/n]: "
   read timeshift
 elif [ $system -eq 2 ];
@@ -31,6 +37,8 @@ then
   read dropboxNemo
   echo -n "Deseja instalar SnapD? [y/n]: "
   read snapD
+  echo -n "Deseja adicionar scripts ao nemo? [y/n]: "
+  read nemoScripts
 else
   exit
 fi
@@ -43,7 +51,6 @@ echo -n "Deseja instalar codecs? [y/n]: "
 read codecs
 echo -n "Deseja instalar github? [y/n]: "
 read github
-echo -n "Deseja instalar node? [y/n]: "
 echo -n "Deseja instalar cpp compiler? [y/n]: "
 read cppCompiler
 echo -n "Deseja instalar rar? [y/n]: "
@@ -76,12 +83,16 @@ echo -n "Deseja instalar Peek? [y/n]: "
 read peek
 echo -n "Deseja instalar Flameshot? [y/n]: "
 read flameshot
-echo -n "Deseja instalar mega? [y/n]: "
-read mega
 echo -n "Deseja instalar LAMP? [y/n]: "
 read lamp
 echo -n "Deseja clonar repositórios? [y/n]: "
 read clone
+echo -n "Deseja instalar zsh? [y/n]: "
+read zsh
+echo -n "Deseja criar uma chave ssh para seu github? [y/n]: "
+read sshKey
+echo -n "Seu teclado precisa configurar o cedilla? [y/n]: "
+read cedilla
 
 echo -n "pressione ENTER para continuar "
 read
@@ -243,13 +254,6 @@ then
   ./apps/flameshot.sh
 fi
 
-if [ $mega == "y" ];
-then
-  wget https://mega.nz/linux/MEGAsync/xUbuntu_18.04/amd64/megasync-xUbuntu_18.04_amd64.deb
-  sudo dpkg -i megasync-xUbuntu_18.04_amd64.deb
-  rm megasync-xUbuntu_18.04_amd64.deb
-fi
-
 if [ $lamp == "y" ];
 then
   ./apps/LAMP.sh
@@ -261,36 +265,28 @@ then
   ./my-development-environments/setup.sh
 fi
 
-echo -n "pressione ENTER para continuar "
-read
+if [ $nemo == "y" ];
+then
+  ./apps/nemo.sh
+fi
 
-clear
-
-echo -n "Deseja criar uma chave ssh para seu github? [y/n]: "
-read sshKey
+if [ $zsh == "y" ];
+then
+  ./apps/zsh.sh
+fi
 
 if [ $sshKey == "y" ];
 then
   ./configSystem/ssh/sshKey.sh
 fi
 
-clear
-
-if [ $system -eq 2 ];
+if [ $nemoScripts == "y" ];
 then
-  echo -n "Deseja adicionar scripts ao nemo? [y/n]: "
-  read nemoScripts
-  if [ $nemoScripts == "y" ];
-  then
-    cd configSystem/nemoScripts
-    ./configNemoScripts.sh
-    cd ..
-    cd ..
-  fi
+  cd configSystem/nemoScripts
+  ./configNemoScripts.sh
+  cd ..
+  cd ..
 fi
-
-echo -n "Seu teclado precisa configurar o cedilla? [y/n]: "
-read cedilla
 
 if [ $cedilla == "y" ];
 then
@@ -300,16 +296,8 @@ then
   cd ..
 fi
 
-echo "Agora vamos atualizar o sistema novamente"
-echo -n "pressione ENTER para continuar "
-read
-
 sudo apt-get update
 sudo apt-get upgrade
-
-echo -n "pressione ENTER para continuar "
-read
-clear
 
 echo -n "É RECOMENDADO QUE REINICIE SEU PC. VOCÊ DESEJA REINICIAR? [y/n]"
 read reiniciar

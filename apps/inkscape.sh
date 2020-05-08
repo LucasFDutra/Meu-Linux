@@ -1,3 +1,2 @@
 #!/bin/bash
-
-sudo apt install inkscape -y
+sudo snap install inkscape

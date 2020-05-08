@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo apt-get install octave -y
+sudo snap install inkscape
