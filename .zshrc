@@ -1,5 +1,7 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=~/.local/bin:$PATH
+export PATH=~/.poetry/bin:$PATH
 
 # Path to your oh-my-zsh installation.
 export ZSH="/home/lucas/.oh-my-zsh"
@@ -119,6 +121,7 @@ zinit light-mode for \
     zinit-zsh/z-a-bin-gem-node
 
 SPACESHIP_PROMPT_ORDER=(
+  venv
   user          # Username section
   dir           # Current directory section
   host          # Hostname section
@@ -134,11 +137,13 @@ SPACESHIP_PROMPT_ORDER=(
 
 SPACESHIP_USER_SHOW=always
 SPACESHIP_PROMPT_ADD_NEWLINE=false
-SPACESHIP_PROMPT_SEPARATE_LINE=false
-SPACESHIP_CHAR_SYMBOL="➜"
+SPACESHIP_PROMPT_SEPARATE_LINE=true
+SPACESHIP_CHAR_SYMBOL="❯❯"
 SPACESHIP_CHAR_SUFFIX=" "
 
 ### End of Zinit's installer chunk
 zinit light zdharma/fast-syntax-highlighting
 zinit light zsh-users/zsh-autosuggestions
 zinit light zsh-users/zsh-completions
+
+alias awslocal="aws --endpoint-url=http://localhost:4566"
