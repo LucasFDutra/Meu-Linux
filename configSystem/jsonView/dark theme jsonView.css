@@ -1,0 +1,83 @@
+body {
+  white-space: pre;
+  font-family: monospace;
+  font-size: 14px;
+  background: #282a36;
+  color: #f8f8f2;
+}
+
+a:link,
+a:hover,
+a:visited {
+  text-decoration: none;
+}
+
+a:link {
+  color: #ff79c6;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #ff79c6;
+}
+
+.property {
+  font-weight: bold;
+  color: #8be9fd;
+}
+
+.type-null {
+  color: #bd93f9;
+}
+
+.type-boolean {
+  color: #bd93f9;
+}
+
+.type-number {
+  color: #bd93f9;
+}
+
+.type-string {
+  color: #f1fa8c;
+}
+
+.callback-function {
+  color: gray;
+}
+
+.collapser:after {
+  content: "-";
+}
+
+.collapsed > .collapser:after {
+  content: "+";
+}
+
+.ellipsis:after {
+  content: " … ";
+}
+
+.collapsible {
+  margin-left: 2em;
+}
+
+.hoverable {
+  padding-top: 1px;
+  padding-bottom: 1px;
+  padding-left: 2px;
+  padding-right: 2px;
+  border-radius: 2px;
+}
+
+.hovered {
+  background-color: #44475a;
+}
+
+.collapser {
+  padding-right: 6px;
+  padding-left: 6px;
+}
