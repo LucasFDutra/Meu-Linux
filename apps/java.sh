@@ -1,3 +1,3 @@
 #!/bin/bash
 
-sudo apt install default-jre default-jdk
+sudo apt install default-jre default-jdk -y
