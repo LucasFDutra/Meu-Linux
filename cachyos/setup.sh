@@ -32,11 +32,13 @@ distrobox-enter --name ubuntu-apps -- bash distrobox-export --bin /usr/bin/googl
 
 
 # config terminal
-curl -s https://ohmyposh.dev/install.sh | bash -s # install oh-my-posh
-oh-my-posh init fish --config https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/refs/heads/main/themes/bubbles.omp.json | source
-oh-my-posh font install FiraCode
-oh-my-posh font install GeistMono
-
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v3.4.0/FiraCode.zip -O FiraCode.zip
+unzip FiraCode.zip -d FiraCode
+mkdir -p ~/.fonts
+cp FiraCode/* ~/.fonts/
+fc-cache -fv
+rm -rf FiraCode
+rm FiraCode.zip
 
 # pacotes flatpak e snaps
 flatpak install flathub com.github.tchx84.Flatseal
